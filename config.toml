@@ -16,20 +16,20 @@ title = 'SpecMesh OpenSource'
   weight = 2
   [[menu.Main]]
   name = "About"
-  url= "/about/"
+  url= "about"
   weight = 3
   [[menu.Main]]
   name = "Blog/News"
   url= "#blog"
   weight = 4
-#  [[menu.Main]]
-#  name = "FAQ"
-#  url= "#faq"
-#  weight = 5
   [[menu.Main]]
-  name = "Contact"
-  url= "/contact/"
+  name = "FAQ"
+  url= "#faq"
   weight = 5
+#  [[menu.Main]]
+#  name = "Contact"
+#  url= "/contact/"
+#  weight = 5
 
   [[menu.Main]]
   name = "GitHub"
