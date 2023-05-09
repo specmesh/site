@@ -1,0 +1,30 @@
+---
+enable: true
+title: "Frequently Asked Questions"
+faq:
+  - question: "Q. Who created specmesh?"
+    answer: >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+#  - question: "Q. Can i being a contributor and how?"
+#    answer: >
+#            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+#  - question: "Q. Who controls the roadmap?"
+#    answer: >
+#            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit excepturi
+#            eaque quidem recusandae facere obcaecati optio, perferendis iusto maxime eligendi!
+#  - question: "Q. What versions of kaka she's it work with?"
+#    answer: >
+#            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+#  - question: "Q. Will you extend it for anything else?"
+#    answer: >
+#            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+#  - question: "Q. What data catalogue integration doest/will support?"
+#    answer: >
+#      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+#  - question: "Q. Who are the companies behind it?"
+#    answer: >
+#      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+#  - question: "Q. How can i get in contact with you?"
+#    answer: >
+#      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+---

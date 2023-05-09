@@ -2,20 +2,29 @@
 enable: true
 title: "Frequently Asked Questions"
 faq:
-  - question: "Q. How do I apply?"
+  - question: "Q. Who created specmesh?"
     answer: >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
-  - question: "Q. Where can I find out about funding?"
+      It was created by Neil Avery (Ex-Confluent), Sion Smith (OSO DevOps CTO) and Andy Coates (Ex-Confluent)
+  - question: "Q. Can i become a contributor and how?"
     answer: >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
-  - question: "Q. How can I make a change to my application?"
+            Yes absolutely, either start a chat via a Issue, Enhancement or PR and we can go from there
+  - question: "Q. Who controls the roadmap?"
     answer: >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit excepturi 
-            eaque quidem recusandae facere obcaecati optio, perferendis iusto maxime eligendi!
-  - question: "Q. What are entry requirements?"
+      It's first-come, first-served; however, ultimately, it's the three of us and whoever else is showing interest.
+  - question: "Q. What versions of Apache Kafka does it work with?"
     answer: >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
-  - question: "Q. How do I get a reference?"
+            It uses the Admin Client (like all Kafka admin tools - ansible, terraform and kafka scripts). This means it works with
+            Open Source Apache Kafka, AWS MSK, Red Panda and Confluent Cloud and Confluent Platform (RBaC pending)
+  - question: "Q. Will you extend it for anything else?"
     answer: >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, consectetur?
+            Its unlikely - there is too much value to build up the stack?
+  - question: "Q. What data catalogue integration will be supported?"
+    answer: >
+            It will focus on LinkedIn's DataHub?
+  - question: "Q. Who are the companies behind it?"
+    answer: >
+      Liquidlabs and OSO DevOps?
+  - question: "Q. How can i get in contact with you?"
+    answer: >
+      Create an issue in GitHub and we will be notified!
 ---
