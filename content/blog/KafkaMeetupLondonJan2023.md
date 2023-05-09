@@ -1,8 +1,8 @@
 ---
-title: "How Four Tech Companes Use Property"
-date: 2022-01-06T11:15:47+06:00
-featureImage: images/blog/blog-thumb-2.jpg
-tags: ["Marketing", "Web Design"]
+title: "SpecMesh at Kafka Meetup, London, January 2023"
+date: 2023-01-18T11:18:56+06:00
+featureImage: images/blog/blog-feature.jpg
+tags: ["Marketing", "News"]
 ---
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius eum dolor voluptatum autem minima magni soluta reiciendis corrupti, iste odio, minus odit voluptates rerum veritatis nam vel! Odio, totam?
 
@@ -21,3 +21,4 @@ tags: ["Marketing", "Web Design"]
   - List item number 04
   - List item number 05
   - List item number 06
+

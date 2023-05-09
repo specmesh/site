@@ -12,18 +12,18 @@ galleryImage:
  - name: Apache Kafka maturity curve
    image: "images/mesh/ov-maturity-curve.png"
    description: >
-     It takes a team many years to reach Level 5, the "Central Nervous System" stage - many organizations never get past Stage 3. SpecMesh allows you to start building a CNS right out of the box.
+     It takes a team many years to reach Level 5, the "Central Nervous System" stage - many organizations never get past Stage 3. SpecMesh allows you to start building a CNS right out of the box
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
- - name: The Gartner Hype Cycle on Data Integration (Data Mesh)
+ - name: Gartner, Hype Cycle for Data Management (Data Mesh)
    image: "images/mesh/ov-hype-cycle.png"
    description: >
-     Data Mesh aligns closely with the functionality needed when constructing a Central Nervous System. It enhances discovery by incorporating Data Cataloging and introducing Federated Governance.
+     Data Mesh aligns closely with the functionality required for constructing a Central Nervous System. It enhances discovery by incorporating data cataloging and introducing federated governance
    link: "https://specmesh.github.io/specmesh-build/"
  - name: The 4 Pillars of Data Mesh
    image: "images/mesh/ov-4-pillars.png"
    description: >
-     Data Mesh is a confusing space. The 4 Pillars are the only thing that is truely agreed upon. SpecMesh addresses them all.
+     Data Mesh is a confusing space. The 4 Pillars are the only thing that is truly agreed upon. SpecMesh addresses them all
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
  - name: SpecMesh Development
@@ -36,7 +36,7 @@ galleryImage:
  - name: SpecMesh in the enterprise
    image: "images/mesh/ov-enterprise.png"
    description: >
-     Once each Spec (Data Product) is provisioned, the meta data (spec + schema's) is published to a data catalogue to enable discovery.
+     Once each Spec (Data Product) is provisioned, the meta data (spec + schema's) is published to a data catalogue to enable discovery
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
  - name: The enterprise landscape
