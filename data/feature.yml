@@ -1,0 +1,37 @@
+---
+enable: true
+title: "Features"
+subtitle: >
+    A developer toolkit for streaming data mesh built on Apache Kafka
+features:
+  - name: "Specification Driven"
+    description: >
+                Build your Kafka applications using the industry standard AsyncAPI spec.
+    link: "https://www.asyncapi.com/"
+    icon: "ti-view-grid"
+  - name: "Scale across the organisation"
+    description: >
+      Specs capture 'Aggregates' that represent units of business functionality. 
+      This hierarchy incorporates a structure that allows for clear and concise ownership and governance rules.
+    icon: "ti-infinite"
+    link: "https://specmesh.github.io/specmesh-build/"
+  - name: "Simplified Kafka resources by modelling"
+    description: >
+      SpecMesh will model topics, schemas, and permissions as a unified configuration, rather than using the disparate configurations employed by other tools.
+    icon: "ti-world"
+    link: "https://specmesh.github.io/specmesh-build/"
+  - name: "Chargeback support"
+    description: >
+      By modeling a collection of topics under a single app that uses a common hierarchy, SpecMesh is able to report on storage and consumption metrics that can be used to build chargeback systems.
+    icon: "ti-credit-card"
+    link: "https://specmesh.github.io/specmesh-build/"
+  - name: "Self-governance"
+    description: >
+                Topic names can use a '_protected' label, this allows a tag to be incorporated where the application owner can grant permissions to other domain-ids (principles)
+    icon: "ti-lock"
+    link: "https://specmesh.github.io/specmesh-build/"
+  - name: "Observability"
+    description: >
+      SpecMesh will support a dataflow-centric visualization of all related specifications (apps), their relationships, as well as producers and consumers (coming soon).
+    icon: "ti-image"
+---

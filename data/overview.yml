@@ -1,0 +1,49 @@
+---
+title : "Data Mesh meets streaming data"
+enable: true
+subtitle: >
+    For organisations to successfully adopt data mesh, setting up and maintaining infrastructure needs to be easy.
+    We believe the best way to achieve this is to leverage the learnings from building a ‘central nervous system‘, commonly used in modern data-streaming ecosystems. This approach formalises and automates of the manual parts of building a data mesh.
+
+summary: >
+  SpecMesh combines Kafka best practice, blue prints, domain driven design concepts, data modelling, GitOps and chargegback. But rather than talk about it, we decided to build it!
+
+galleryImage:
+ - name: Apache Kafka maturity curve
+   image: "images/mesh/ov-maturity-curve.png"
+   description: >
+     It takes a team many years to reach Level 5, the "Central Nervous System" stage - many organizations never get past Stage 3. SpecMesh allows you to start building a CNS right out of the box.
+   icon: "ti-world"
+   link: "https://specmesh.github.io/specmesh-build/"
+ - name: The Gartner Hype Cycle on Data Integration (Data Mesh)
+   image: "images/mesh/ov-hype-cycle.png"
+   description: >
+     Data Mesh aligns closely with the functionality needed when constructing a Central Nervous System. It enhances discovery by incorporating Data Cataloging and introducing Federated Governance.
+   link: "https://specmesh.github.io/specmesh-build/"
+ - name: The 4 Pillars of Data Mesh
+   image: "images/mesh/ov-4-pillars.png"
+   description: >
+     Data Mesh is a confusing space. The 4 Pillars are the only thing that is truely agreed upon. SpecMesh addresses them all.
+   icon: "ti-world"
+   link: "https://specmesh.github.io/specmesh-build/"
+ - name: SpecMesh Development
+   image: "images/mesh/ov-model-provision.png"
+   description: >
+     Each team owns and manages their own AsyncAPI spec. The spec is provisioned using GitHub Actions. 
+     The build workflow provisions each environment as the spec is promoted
+   icon: "ti-world"
+   link: "https://specmesh.github.io/specmesh-build/"
+ - name: SpecMesh in the enterprise
+   image: "images/mesh/ov-enterprise.png"
+   description: >
+     Once each Spec (Data Product) is provisioned, the meta data (spec + schema's) is published to a data catalogue to enable discovery.
+   icon: "ti-world"
+   link: "https://specmesh.github.io/specmesh-build/"
+ - name: The enterprise landscape
+   image: "images/mesh/ov-enterprise-wide.png"
+   description: >
+     As the organisation grows more and more Specs (Data Products) are deployed where services emit events over domain structured '_public' and/or '_protected' topics
+   icon: "ti-world"
+   link: "https://specmesh.github.io/specmesh-build/"
+
+---
