@@ -1,0 +1,83 @@
+baseURL = 'https://cohub-hugo.netlify.app'
+languageCode = 'en-us'
+paginate = 6
+theme= "coHub"
+title = 'SpecMesh OpenSource'
+ 
+[menu]
+  # Main Menu
+  [[menu.Main]]
+  name = "Overview"
+  url= "#overview"
+  weight = 1
+  [[menu.Main]]
+  name = "Features"
+  url= "#feature"
+  weight = 2
+  [[menu.Main]]
+  name = "About"
+  url= "/about/"
+  weight = 3
+  [[menu.Main]]
+  name = "Blog/News"
+  url= "#blog"
+  weight = 4
+#  [[menu.Main]]
+#  name = "FAQ"
+#  url= "#faq"
+#  weight = 5
+  [[menu.Main]]
+  name = "Contact"
+  url= "/contact/"
+  weight = 5
+
+  [[menu.Main]]
+  name = "GitHub"
+  url= "https://github.com/specmesh/specmesh-build"
+  weight = 6
+
+
+  # Sitemap Menu
+  [[menu.sitemap]]
+  name = "Privacy Policy"
+  url = "/privacy/"
+  weight = 1
+  [[menu.sitemap]]
+  name = "Terms"
+  url = "/terms/"
+  weight = 2
+
+[params]
+  aboutPageURL = "blog"
+  contactLink = "contact"
+  copyright = "© {year} <a href=\"https://specmesh.io/\" target=\"_blank\">SpecMesh.io </a>"
+  fabFormURL =  "https://fabform.io/f/u00kv3-"
+  googleAnalytics = "G-JZ95FEWF9K"
+  logo = "images/logo.png"
+  footerlogo = "images/logo.png"
+  footerDescription = "This project is community funded, all help is greatly appreciated"
+
+  [params.address]
+  address = "London"
+  email = "neil.avery@specmesh.io"
+  openingDesc = "Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days."
+
+  [params.map]
+  APIkey = "AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0"
+  latitude = "45.4502528"
+  longitude = "-122.783407"
+  pinImage = "images/pin.png"
+
+  # Social icons
+  [[params.social]]
+  icon = "ti-twitter-alt"
+  url = "https://twitter.com/"
+  weight = 1
+  [[params.social]]
+  icon = "ti-github"
+  url = "https://github.com/specmesh/specmesh-build"
+  weight = 2
+
+
+
+  
