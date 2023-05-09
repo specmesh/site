@@ -1,7 +1,7 @@
 baseURL = 'https://cohub-hugo.netlify.app'
 languageCode = 'en-us'
 paginate = 6
-theme= "coHub"
+theme= "coHub2"
 title = 'SpecMesh OpenSource'
  
 [menu]
