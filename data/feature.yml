@@ -15,7 +15,7 @@ features:
       This hierarchy incorporates a structure that allows for clear and concise ownership and governance rules.
     icon: "ti-infinite"
     link: "https://specmesh.github.io/specmesh-build/"
-  - name: "Simplified Kafka resources by modelling"
+  - name: "Simplified Kafka resource modelling"
     description: >
       SpecMesh will model topics, schemas, and permissions as a unified configuration, rather than using the disparate configurations employed by other tools.
     icon: "ti-world"
