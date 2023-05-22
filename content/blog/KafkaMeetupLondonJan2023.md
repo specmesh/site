@@ -1,24 +1,19 @@
 ---
-title: "SpecMesh at Kafka Meetup, London, January 2023"
+title: "SpecMesh at Kafka Meetup, London, A Practical Guide: Building a Data Mesh on Apache Kafka. Jan 2022"
 date: 2023-01-18T11:18:56+06:00
-featureImage: images/blog/blog-feature.jpg
+featureImage: images/blog/kafka-meetup-jan-2022.png
 tags: ["Marketing", "News"]
 ---
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius eum dolor voluptatum autem minima magni soluta reiciendis corrupti, iste odio, minus odit voluptates rerum veritatis nam vel! Odio, totam?
+  A Kafka Meetup Tech talk that is targeted at Kafka Devs.
 
-  ### A sample heading 
+  ### Summary
+
+Kafka is great, it’s un-opinionated and lets you build whatever you want; however many times we need opinions! We need some guidance on establishing the fundamentals of topic-naming & structuring, and schemas. We also need a consistent means of provisioning topics, handling their change, updating schemas, testing, knowing who owns which topics, as well as many other things.
+SpecMesh OS brings all of this together under the banner of ‘data-mesh’. It provides a consistent means of modeling Kafka applications and resources as a ‘data product’, consistent tooling and automation to support governance and self-service that works with your tests and CI/CD. Think of it as an accelerator for doing things right when starting, building, and managing the ongoing lifecycle of your Kafka-based applications.
+
+This talk deep dives into some of the common problems experienced on any Kafka project and how these problems should be avoided. Then it dives into Opensource automation and tooling that Specmesh uses to build enterprise level streaming applications
+
   
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia quas maiores, error magnam distinctio doloribus fugiat ea minima incidunt odio facere nam nisi quod nobis aut quae aliquid. Atque voluptas esse voluptate. Placeat laudantium veniam, repellendus laboriosam blanditiis commodi!
-  > “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex deleniti porro impedit iure nisi, eius sapiente dolorum magni tempora harum!”
+  - https://youtu.be/rPwLGUjjWLw
 
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia quas maiores, error magnam distinctio doloribus fugiat ea minima incidunt odio facere nam nisi quod nobis aut quae aliquid. Atque voluptas esse voluptate. Placeat laudantium veniam, repellendus laboriosam blanditiis commodi!
-
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia quas maiores, error magnam distinctio doloribus fugiat ea minima incidunt odio facere nam nisi quod nobis aut quae aliquid. Atque voluptas esse voluptate. Placeat laudantium veniam, repellendus laboriosam blanditiis commodi!
-  
-  - List item number 01
-  - List item number 02
-  - List item number 03
-  - List item number 04
-  - List item number 05
-  - List item number 06
 

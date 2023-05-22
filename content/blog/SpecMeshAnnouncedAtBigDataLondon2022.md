@@ -1,24 +1,20 @@
 ---
-title: "SpecMesh announced at Big Data London, October 2022"
-date: 2022-10-25T11:18:56+06:00
-featureImage: images/blog/blog-feature.jpg
+title: "SpecMesh announced at Big Data London, Sep 2022"
+date: 2022-09-22T11:18:56+06:00
+featureImage: https://oso.sh/wp-content/uploads/2022/11/spec-mesh-featured.png
 tags: ["Marketing", "News"]
 ---
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eius eum dolor voluptatum autem minima magni soluta reiciendis corrupti, iste odio, minus odit voluptates rerum veritatis nam vel! Odio, totam?
 
-  ### A sample heading 
-  
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia quas maiores, error magnam distinctio doloribus fugiat ea minima incidunt odio facere nam nisi quod nobis aut quae aliquid. Atque voluptas esse voluptate. Placeat laudantium veniam, repellendus laboriosam blanditiis commodi!
-  > “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex deleniti porro impedit iure nisi, eius sapiente dolorum magni tempora harum!”
 
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia quas maiores, error magnam distinctio doloribus fugiat ea minima incidunt odio facere nam nisi quod nobis aut quae aliquid. Atque voluptas esse voluptate. Placeat laudantium veniam, repellendus laboriosam blanditiis commodi!
+  ### SpecMesh announced at Big Data London, October 2022 
 
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore mollitia quas maiores, error magnam distinctio doloribus fugiat ea minima incidunt odio facere nam nisi quod nobis aut quae aliquid. Atque voluptas esse voluptate. Placeat laudantium veniam, repellendus laboriosam blanditiis commodi!
-  
-  - List item number 01
-  - List item number 02
-  - List item number 03
-  - List item number 04
-  - List item number 05
-  - List item number 06
+Today, we are excited to announce the launch of SpecMesh: a specification-driven data mesh methodology for the enterprise. SpecMesh is an open-source project that uses specifications to capture, provision and serve data products within a data mesh.  The project was launched at Big Data LDN 2022. The project has been initiated by OSO, but we are looking to the data mesh community to help steer the roadmap and evolve the product.
+
+You can find out more about SpecMesh and view the talk over at https://www.specmesh.io
+
+
+
+
+  - Video: https://www.youtube.com/watch?v=cA9CEcH9M8c
+  - Slides https://www.slideshare.net/IanFurlong4/the-enterprise-guide-to-building-a-data-mesh-introducing-specmesh
 
