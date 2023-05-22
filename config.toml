@@ -26,15 +26,19 @@ title = 'SpecMesh OpenSource'
   name = "FAQ"
   url= "#faq"
   weight = 5
-#  [[menu.Main]]
-#  name = "Contact"
-#  url= "/contact/"
-#  weight = 5
-
   [[menu.Main]]
   name = "GitHub"
   url= "https://github.com/specmesh/specmesh-build"
   weight = 6
+  [menu.Main.params]
+    external = true
+
+  [[menu.Main]]
+  name = "Wiki"
+  url= "https://github.com/specmesh/docs/wiki"
+  weight = 7
+  [menu.Main.params]
+  external = true
 
 
   # Sitemap Menu
