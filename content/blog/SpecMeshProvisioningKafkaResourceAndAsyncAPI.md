@@ -45,8 +45,8 @@ You will see the principal ID, ACME Simple Range Live Enhancer, prefixing each o
 **Key points:**
 1. **AsyncAPI extension:**  `id` is used to identify the data-product using domain driven thinking, it also represents the security principle (secrets etc), as well as the Aggregate in the context of an business's function (not an org map). This is one of the pillars of DataMesh
 1. Ownership of 'data product' resources is established by prefixing the `id` to all resources
-1. **AsyncAPI extension**  Prefixing channels (topics) using `_private`, `_public`, and `_protected` provides sharing controls and suppress the need for understanding ACL configuration. 
-1. **AsyncAPI extension** `_protected` topics provide a means of fine-grained self-governance using the `tag: grant-access` pattern. This is one of the pillars of DataMesh 
+1. **AsyncAPI extension:**  Prefixing channels (topics) using `_private`, `_public`, and `_protected` provides sharing controls and suppress the need for understanding ACL configuration. 
+1. **AsyncAPI extension:** `_protected` topics provide a means of fine-grained self-governance using the `tag: grant-access` pattern. This is one of the pillars of DataMesh 
 
 ..
 
