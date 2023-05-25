@@ -28,7 +28,7 @@ channels:
 ```
 
 
-The primary purpose of this ID field extends beyond merely understanding the name or identification of the data product. It also aims to structurally map it within the organisation for domain ownership (and functionality). For instance, in our case, the data product includes "ACME (org), Simple Range (product range), and Life Enhancer (function)". In this fictitious structure, it's broken down as `company.product-group.product`. With DDD (Domain-Driven Design), we aim to decompose things into aggregates, which are groups of related functionality (a cluster of services ideally from the same aggregate level repository, thus supporting black box testing) rather than relying on organizational groupings.
+The primary purpose of this ID field extends beyond merely understanding the name or identification of the data product. It also aims to structurally map it within the organisation for domain ownership (and functionality). For instance, in our case, the data product includes _"ACME, Simple Range, and Life Enhancer"_. In this fictitious structure, it's broken down as `company.product-group.product`. With DDD (Domain-Driven Design), we aim to decompose things into aggregates, which are groups of related functionality (a cluster of services ideally from the same aggregate level repository, thus supporting black box testing) rather than relying on organizational groupings.
 
 The ID is prefixed to individual channels or topics, as they are known in Kafka. Each of the channels owned by the Life Enhancer product is prefixed with either a `_public` or `_private` keyword. Additionally, the `_protected` keyword is also employed for self-governance purposes.
 
