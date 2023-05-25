@@ -6,7 +6,7 @@ tags: ["Educational", "Blog"]
 ---
 
 
-In this blog, I will discuss how SpecMesh utilizes the Async API spec to provision Kafka resources and how it extends some of the functionality through its structuring and standards introduced via regular text patterns. One of the first elements to note is the ID field in the Async API spec, which is used recurrently for various purposes. 
+In this blog, I will discuss how SpecMesh utilizes the Async API spec to provision Kafka resources and how it extends some of AsyncAPI spec functionality through its textual structuring introduced via regular text patterns. One of the first elements to note is the ID field in the Async API spec, which is used recurrently for various purposes. 
 
 ```yaml
 asyncapi: '2.5.0'
@@ -27,15 +27,14 @@ channels:
           $ref: "/schema/acme.simple_range.life_enhancer._public.user_signed_up.avsc"
 ```
 
-The primary purpose of this ID field is not just to understand the name or identification of the data product but also to structurally map it within the organisation. For instance, we have ACME, Simple Range, and Life Enhancer as the data products in this particular case. The ID is prefixed to individual channels or topics as they are known in Kafka. Each of the channels owned by the Life Enhancer product is prefixed with a _public and _private keyword. The _protected keyword is also present for self-governance.
-
+The primary purpose of this ID field is not just to understand the name or identification of the data product but also to structurally map it within the organisation. For instance, we have ACME, Simple Range, and Life Enhancer as the data products in this particular case. In this fictitious the structure is broken down as `company.product-group.product` - with DDD (Domain Driven Design) we are trying to break things down to aggregates as groups of related functionality (a group of services - ideally from the same aggregate level repo that supports black box testing) - never organisational grouping. The ID is prefixed to individual channels or topics as they are known in Kafka. Each of the channels owned by the Life Enhancer product is prefixed with a `_public` and `_private` keyword. The `_protected` keyword is also present for self-governance.
 
 
 Within each section, we have a Kafka configuration section and the schema related to it. The schema captures the data format of the event set to be published. Hence, the ID serves multiple purposes, with the key purpose being the principle. This allows for clear ownership when any resource is provisioned on behalf of this data product. Topics are prefixed with the principal, schemas are published into the schema registry prefixed with a schema principal, and ACLs also use the prefix. ACLs are governed or controlled by the keywords public, private, or protected.
 
 ![SpecMesh CLI - Provision](/images/blog/specmesh-provision-cli.png)
 
-Suppose our developer has designed the data model for their data product. The next step is to provision an environment. The provision command, part of SpecMesh, utilizes the Kafka admin client. This admin client can be used against any Kafka infrastructure, such as MSK, Open Source Apache Kafka, Confluent Cloud, Red Panda, or others. The provision command, executed from the command line, through Docker, or a GitHub workflow as part of a pull request, then provisions the topics.
+Suppose our developer has designed the data model for their data product. The next step is to provision an environment (local machine, or cluster). The [provision](https://github.com/specmesh/specmesh-build/blob/main/cli/README.md) command, part of the SpecMesh CLI, utilizes the [Kafka admin client](https://kafka.apache.org/documentation/#adminapi). This admin client can be used against any Kafka infrastructure, such as MSK, Open Source Apache Kafka, Confluent Cloud, Red Panda, or others. The `provision` command, executed from the command line, through Docker, or a GitHub workflow as part of a pull request, then provisions the topics.
 
 ![SpecMesh CLI - Provision](/images/blog/specmesh-provision-topics.png)
 
