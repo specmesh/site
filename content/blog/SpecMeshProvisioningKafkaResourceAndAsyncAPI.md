@@ -6,7 +6,7 @@ tags: ["Educational", "Blog"]
 ---
 
 
-In this blog, I will discuss how SpecMesh utilizes the Async API spec to provision Kafka resources and how it extends some of AsyncAPI spec functionality through its textual structuring introduced via regular text patterns. One of the first elements to note is the ID field in the Async API spec, which is used recurrently for various purposes. 
+In this blog, I will discuss how SpecMesh utilizes the AsyncAPI spec to provision Kafka resources and how it extends some of AsyncAPI spec functionality through its textual structuring introduced via regular text patterns. One of the first elements to note is the ID field in the AsyncAPI spec, which is used recurrently for various purposes. 
 
 ```yaml
 asyncapi: '2.5.0'
