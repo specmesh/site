@@ -6,6 +6,6 @@ subtitle: >
         Specification driven data mesh for the enterprise
 heroBGimg: "images/mesh/ai-mesh-blue.jpeg"
 heroVideo : "https://www.youtube.com/watch?v=KXOyRnxosXI"
-herosVideoDesc: "<span> <strong>Watch this Episode: SpecMesh - Kafka resources and the AsyncAPI spec!</strong></span>"
+herosVideoDesc: "<span> <strong>Watch this Episode: `SpecMesh - Kafka resources and the AsyncAPI spec`</strong></span><span> view the <a href='/blog/specmeshprovisioningkafkaresourceandasyncapi/' target='_blank'>blog post</a><span>"
 sourceLink: "https://github.com/specmesh/specmesh-build"
 ---
