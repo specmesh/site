@@ -5,6 +5,7 @@ featureImage: images/blog/specmesh-provision-resources-main.png
 tags: ["Educational", "Blog"]
 ---
 
+_-- Neil Avery_
 
 In this blog, I will discuss how SpecMesh utilizes the [AsyncAPI](https://www.asyncapi.com/) spec to provision Kafka resources and how it extends some of AsyncAPI spec functionality through its textual structuring introduced via regular text patterns. The AsyncApi spec is normally used for documentation purposes - we regularly see it being used for capturing existing deployments - SpecMesh inverts this to a position where it is used as the source of truth in a [GitOps](https://about.gitlab.com/topics/gitops/) workflow and the provisioning of Kafka resources and governance (it can also export a spec). 
 
@@ -49,6 +50,9 @@ You will see the principal ID, ACME Simple Range Live Enhancer, prefixing each o
 1. Ownership of 'data product' resources is established by prefixing the `id` to all resources
 1. **AsyncAPI extension:**  Prefixing channels (topics) using `_private`, `_public`, and `_protected` provides sharing controls and suppress the need for understanding ACL configuration. 
 1. **AsyncAPI extension:** `_protected` topics provide a means of fine-grained self-governance using the `tag: grant-access` pattern. This is one of the pillars of DataMesh 
+
+
+
 
 ..
 
