@@ -6,13 +6,19 @@ subtitle: >
     We believe the best way to achieve this is to leverage the learnings from building a ‘central nervous system‘, commonly used in modern data-streaming ecosystems. This approach formalises and automates of the manual parts of building a data mesh.
 
 summary: >
-  SpecMesh combines Kafka best practice, blue prints, domain driven design concepts, data modelling, GitOps and chargegback. But rather than talk about it, we decided to build it!
+  SpecMesh combines Kafka best practice, blue prints, domain driven design concepts, data modelling, GitOps and chargeback. But rather than talk about it, we decided to build it!
 
 galleryImage:
+ - name: Use AsyncAPI specs to provision Kafka resources
+   image: "images/mesh/specmesh-provision-command-all-resources-mainpage.png"
+   description: >
+      AsyncAPI specs model the API for an event driven applications set of topics. SpecMesh will dryRun, validate and provision Kafka resources
+   icon: "ti-world"
+   link: "https://specmesh.github.io/specmesh-build/"
  - name: Apache Kafka maturity curve
    image: "images/mesh/ov-maturity-curve.png"
    description: >
-     It takes a team many years to reach Level 5, the "Central Nervous System" stage - many organizations never get past Stage 3. SpecMesh allows you to start building a CNS right out of the box
+     It takes a team many years to reach Level 5, the "Central Nervous System" stage. SpecMesh accelerates this journey
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
  - name: Gartner, Hype Cycle for Data Management (Data Mesh)
@@ -26,13 +32,6 @@ galleryImage:
      Data Mesh is a confusing space. The 4 Pillars are the only thing that is truly agreed upon. SpecMesh addresses them all
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
- - name: SpecMesh Development
-   image: "images/mesh/ov-model-provision.png"
-   description: >
-     Each team owns and manages their own AsyncAPI spec. The spec is provisioned using GitHub Actions. 
-     The build workflow provisions each environment as the spec is promoted
-   icon: "ti-world"
-   link: "https://specmesh.github.io/specmesh-build/"
  - name: SpecMesh in the enterprise
    image: "images/mesh/ov-enterprise.png"
    description: >
@@ -43,6 +42,13 @@ galleryImage:
    image: "images/mesh/ov-enterprise-wide.png"
    description: >
      As the organisation grows more and more Specs (Data Products) are deployed where services emit events over domain structured '_public' and/or '_protected' topics
+   icon: "ti-world"
+   link: "https://specmesh.github.io/specmesh-build/"
+ - name: SpecMesh Development
+   image: "images/mesh/ov-model-provision.png"
+   description: >
+     Each team owns and manages their own AsyncAPI spec. The spec is provisioned using GitHub Actions. 
+     The build workflow provisions each environment as the spec is promoted
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
 
