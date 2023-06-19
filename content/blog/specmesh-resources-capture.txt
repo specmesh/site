@@ -11,10 +11,10 @@ Each of the channels owned by the Life Enhancer product is prefixed with an _pub
 There's also the _protected keyword which allows for self-governance.
 Within each of the sections we have a Kafka configuration section and also the schema that relates to this
 to this where the schema captures the data format of the event that's going to be published.
-So the ID serves multiple purposes. The key purpose is the principle. This allows for
+So the ID serves multiple purposes. The key purpose is the principal. This allows for
 clear ownership when any resource is provisioned on behalf of this data product. Topics are prefixed
-with the principle, schemas are published into the schema registry,
-prefix with a schema principle and ACLs also use the prefix. ACLs are governed or controlled
+with the principal, schemas are published into the schema registry,
+prefix with a schema principal and ACLs also use the prefix. ACLs are governed or controlled
 by the keyword public, private or protected. So let's say our developer has sat down and developed
 the data model for his data product. The next step after that is to actually provision an environment.
 Now the provision command which is part of SpecMASH uses the Kafka admin client.
@@ -22,10 +22,10 @@ Now the admin client can be used against any Kafka infrastructure
 such as MSK, Open Source Apache Kafka, Confluent Cloud or others, even Red Panda.
 So what happens then is the provision command either executed from the command line
 through Docker or a GitHub workflow as part of a pull request will then provision the topics.
-Again, you will see the principle ID, ACME Simple Range Live Enhancer prefixing each of the topics
+Again, you will see the principal ID, ACME Simple Range Live Enhancer prefixing each of the topics
 and you can see the whole thing concatenated together and the configuration of retention
 and cleanup policies specified. Next, we can see schemas are being published into Schema Registry.
-Again, ownership is clearly identified by the use of the principle or the data product ID
+Again, ownership is clearly identified by the use of the principal or the data product ID
 and yet again ACLs. ACLs are somewhat different. They are controlled by the use of public,
 private and protected. In the case of protected, the application owner or the data product owner
 can self-govern and use tags within the spec to grant access to other domains. When SpecMesh

@@ -27,7 +27,7 @@ features:
     link: "https://specmesh.github.io/specmesh-build/"
   - name: "Self-governance"
     description: >
-                Topic names can use a '_protected' label, this allows a tag to be incorporated where the application owner can grant permissions to other domain-ids (principles)
+                Topic names can use a '_protected' label, this allows a tag to be incorporated where the application owner can grant permissions to other domain-ids (principals)
     icon: "ti-lock"
     link: "https://specmesh.github.io/specmesh-build/"
   - name: "Observability"
