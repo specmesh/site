@@ -32,7 +32,7 @@ galleryImage:
      Data Mesh is a confusing space. The 4 Pillars are the only thing that is truly agreed upon. SpecMesh addresses them all
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
- - name: SpecMesh in the enterprise
+ - name: SpecMesh OS in the enterprise
    image: "images/mesh/ov-enterprise.png"
    description: >
      Once each Spec (Data Product) is provisioned, the meta data (spec + schema's) is published to a data catalogue to enable discovery
@@ -44,7 +44,7 @@ galleryImage:
      As the organisation grows more and more Specs (Data Products) are deployed where services emit events over domain structured '_public' and/or '_protected' topics
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
- - name: SpecMesh Development
+ - name: SpecMesh OS Development
    image: "images/mesh/ov-model-provision.png"
    description: >
      Each team owns and manages their own AsyncAPI spec. The spec is provisioned using GitHub Actions. 
