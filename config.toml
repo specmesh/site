@@ -3,6 +3,9 @@ languageCode = 'en-us'
 paginate = 6
 theme= "coHub2"
 title = 'SpecMesh OpenSource'
+
+[markup.goldmark.renderer]
+unsafe= true
  
 [menu]
   # Main Menu

@@ -3,29 +3,32 @@ enable: true
 title: "Valuable Feedback"
 backgroundImage: images/testimonial-bg.png
 feedbacks:
+  - feedback: > 
+      'I think what you guys are doing is really good. We've used JulieOps at Smart, but found it quite clunky, with neither Infra or Dev wanting to take ownership of it.  SpecMesh's focus on data modelling is spot on.'
+    feedbackAuthor: "Architect @SmartPensions - London"
   - feedback: >
       ‘We spent 2 years trying to build this and what your guys have built is better’
     feedbackAuthor: "Architect @Tier-1 Investment bank - London"
   - feedback: >
       ‘3 years ago we started evolving to this, instead i wish we could use SpecMesh now’
-    feedbackAuthor: "Manager @One of Europes largest retailers"
+    feedbackAuthor: "Manager @One of Europe's largest retailers"
   - feedback: >
-      ‘Specmesh is much better thought out that our current solution that took a team over 2 years to develop and we still can't solve chargeback’
+      ‘SpecMesh is much better thought out than our current solution which took our team over 2 years to develop...and we still can't solve chargeback’
     feedbackAuthor: "Architect @Tier-1 Investment bank - London"
   - feedback: >
-      ‘Why doesn't kafka have this already? It just makes sense...’
+      ‘Why doesn't Kafka have this already? It just makes sense...’
     feedbackAuthor: "Attendee @Kafka Meetup London"
   - feedback: >
-      ‘We are planning to ditch our broken solution and use to this approach,’
+      ‘We are planning to ditch our broken solution and use this approach,’
     feedbackAuthor: "Manager @Nordic Shipping firm - Big Data London"
   - feedback: >
       ‘Self governance and chargeback and modelling using an AsyncApi Spec just makes sense’
     feedbackAuthor: "Attendee @BigDataLondon"
   - feedback: >
-      ‘We will now use terraform just for server infra, and make specmesh gitops developer led. It just makes sense’
+      ‘We will now use terraform just for server infra, and make SpecMesh GitOps developer led. It just makes sense’
     feedbackAuthor: "Founder @EdTech startup"
   - feedback: >
-      ‘We currently use julieops but need features that it looks like your guys will develop (and it doesn't have)’
+      ‘We currently use JulieOps but need features that it looks like your guys will develop (and it doesn't have)’
     feedbackAuthor: "Tier-1 Investment bank - London"
 
 

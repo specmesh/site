@@ -2,29 +2,29 @@
 enable: true
 title: "Frequently Asked Questions"
 faq:
-  - question: "Q. Who created specmesh?"
+  - question: "Q. Who created SpecMesh?"
     answer: >
       It was created by Neil Avery (Ex-Confluent), Sion Smith (OSO DevOps CTO) and Andy Coates (Ex-Confluent)
   - question: "Q. Can i become a contributor and how?"
     answer: >
-            Yes absolutely, either start a chat via a Issue, Enhancement or PR and we can go from there
+            Yes absolutely, either start a chat via an Issue, Enhancement or PR and we can go from there
   - question: "Q. Who controls the roadmap?"
     answer: >
       It's first-come, first-served; however, ultimately, it's the three of us and whoever else is showing interest.
   - question: "Q. What versions of Apache Kafka does it work with?"
     answer: >
-            It uses the Admin Client (like all Kafka admin tools - ansible, terraform and kafka scripts). This means it works with
-            Open Source Apache Kafka, AWS MSK, Red Panda and Confluent Cloud and Confluent Platform (RBaC pending)
+            It uses the Kafka Admin Client (like all Kafka admin tools - Ansible, Terraform and Kafka scripts). This means it works with
+            Open Source Apache Kafka, AWS MSK, Red Panda and Confluent Cloud and Confluent Platform
   - question: "Q. Will you extend it for anything else?"
     answer: >
-            Its unlikely - there is too much value to build up the stack?
+            It's unlikely - there is too much value to build up the stack
   - question: "Q. What data catalogue integration will be supported?"
     answer: >
-            It will focus on LinkedIn's DataHub?
+            It will focus on LinkedIn's DataHub
   - question: "Q. Who are the companies behind it?"
     answer: >
-      Liquidlabs and OSO DevOps?
+      Liquidlabs and OSO DevOps
   - question: "Q. How can i get in contact with you?"
     answer: >
-      Create an issue in GitHub and we will be notified!
+      Create an Issue in GitHub and we will be notified - https://github.com/specmesh/specmesh-build/issues
 ---

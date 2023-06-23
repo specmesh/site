@@ -3,7 +3,7 @@ title : "Data Mesh meets streaming data"
 enable: true
 subtitle: >
     For organisations to successfully adopt data mesh, setting up and maintaining infrastructure needs to be easy.
-    We believe the best way to achieve this is to leverage the learnings from building a ‘central nervous system‘, commonly used in modern data-streaming ecosystems. This approach formalises and automates of the manual parts of building a data mesh.
+    We believe the best way to achieve this is to leverage the learnings from building a ‘central nervous system‘, commonly used in modern data-streaming ecosystems. This approach formalises and automates the manual parts of building a data mesh.
 
 summary: >
   SpecMesh combines Kafka best practice, blue prints, domain driven design concepts, data modelling, GitOps and chargeback. But rather than talk about it, we decided to build it!
@@ -35,7 +35,7 @@ galleryImage:
  - name: SpecMesh OS in the enterprise
    image: "images/mesh/ov-enterprise.png"
    description: >
-     Once each Spec (Data Product) is provisioned, the meta data (spec + schema's) is published to a data catalogue to enable discovery
+     Once each Spec (Data Product) is provisioned, the meta data (spec + schemas) is published to a data catalogue to enable discovery
    icon: "ti-world"
    link: "https://specmesh.github.io/specmesh-build/"
  - name: The enterprise landscape
