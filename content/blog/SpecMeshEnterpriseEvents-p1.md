@@ -138,7 +138,7 @@ My default mode of operation involves using the Confluent SR, Avro, and Java cli
 
 Modelling domain entities in an event-driven architecture (EDA) requires a slightly different approach compared to traditional service-oriented or monolithic architectures. In an EDA, the focus is more on the changes in the state of the entities (or the events) rather than the entities themselves. Domain entities might be generated from an event-storming/DDD workshop that extracts Bounded Contexts, and models the interaction between them and within them. I will cover this in more detail in part 2.
 
-First, here is a sneak peak of an enterprise system for a fictitious company called ‘acme’. There are four Bounded Contexts (BC). The red BC contains cross cutting/shared entities. Each BC is defined using an AsyncAPI spec.
+First, here is a sneak peak of an enterprise system for a fictitious company called ‘ACME’. There are four Bounded Contexts (BC). The red BC contains cross cutting/shared entities. Each BC is defined using an AsyncAPI spec.
 
 <img src="/images/blog/enterprise-acme-org-contexts.png" alt="drawing" width="800"/>
 <p style="text-align: center;">The ACME company 'Bounded Contexts'</p>
@@ -155,7 +155,7 @@ Here are some guidelines for modelling domain entities in an EDA:
 
 <br>
 
-Remember, in EDA it's essential to think in terms of events and how these events affect your domain entities, as opposed to focusing purely on the entities themselves. It about the data-flow and evolution.
+Remember, in any EDA it's essential to think in terms of events and how these events affect your domain entities, as opposed to focusing purely on the entities themselves. It about the data-flow, the interaction and evolution.
 
 ## Finally..
 
@@ -164,7 +164,7 @@ In an EDA, any decision you make will have ripple effects that can impact the en
 
 As we navigate this complex journey towards building a large-scale Event-Driven Architecture, remember that the goal is not perfection, but rather continuous improvement. We can always learn from our mistakes and use that knowledge to make better decisions in the future. Let's embrace the complexity, learn from each other, and continue to build better, more resilient systems.
 
-There are a few key takeaways from our discussion. Firstly, it's crucial to identify domain entities and events using EventStorming or Domain-Driven Design (DDD). This will give a clear overview of the architecture and reveal opportunities for simplification and decoupling. Secondly, events can be categorized in various ways; they could be used as a 'key', as common or shared entities like 'User', or within a Bounded Context (either as private or public). Thirdly, we should strive for Change Data Capture (CDC) events wherever possible, as they provide a pure and flexible framework for event-driven systems. Next, it's important to restrict commands within a Bounded Context, thus preventing shared knowledge and unnecessary dependencies across different parts of the system. Lastly, always ensure everything is schematized to guarantee compatibility, evolution, and manageability of the data model. These best practices provide a robust foundation for an effective event-driven architecture.
+There are a few key takeaways from our discussion. Firstly, it's crucial to identify domain entities and events using EventStorming or Domain-Driven Design (DDD). This will give a clear overview of the architecture and reveal opportunities for simplification and decoupling. Secondly, events can be categorized in various ways; they could be used as a 'key', as common or shared entities like 'User', or within a Bounded Context (either as private or public). Thirdly, we should strive for Change Data Capture (CDC) events wherever possible, as they provide a pure and flexible framework for event-driven systems. Next, it's important to restrict Commands within a Bounded Context, thus preventing shared knowledge and unnecessary dependencies across different parts of the system. Lastly, always ensure everything is schematized to guarantee compatibility, evolution, and manageability of the data model. These best practices provide a robust foundation for an effective event-driven architecture.
 
 Building an event-driven enterprise with Apache Kafka is an exciting and challenging endeavor, but one that promises significant rewards in terms of flexibility, scalability, and resilience. As we continue this journey together, I look forward to hearing about your experiences and learning from them. Stay tuned for the second part of this series, where we will dive deeper into the world of Apache Kafka and its role in the enterprise. Until then, happy building!
 
