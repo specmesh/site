@@ -10,6 +10,7 @@ _-- Neil Avery (Ex-Confluent)_
 Reviewed by
 _Andy Coates (Ex-Confluent), Stanislav Kozlovski (Confluent), Ben Gamble (Aiven)_
 
+
 Building the 'central nervous system' is one of those phrases that presents a simple concept, but in reality, it turns into an enormous, complex, and challenging task that is generally done incorrectly. This blog post attempts to cover the fundamentals, decisions, thinking, and wider considerations that need to be assembled in a logical way. By leveraging these learnings and relying on tools that simplify processes and adhere to best practices, most pitfalls can be avoided. I've divided the post into two parts. The first part deals with events and conditions for events in the enterprise, and the second part focuses on the area where the 'rubber meets the road'. It covers many of the org level considerations and challenges that need to be overcome in order to build something that is is truely transformative. From Domain orientation, slicing the domain into functional data models, repos and runtimes, to data catalogues and enabling self governance. Ideally, this mini-series should be much longer and filled with more elaborate examples, but I'm trying to provide as much detail and value as possible - in the shortest possible space! My hope is that this information will empower you to embark on your own journey to build an event-driven enterprise with Apache Kafka.
 
 This is [Confluent's maturity model](https://www.confluent.io/en-gb/blog/event-streaming-benefits-increase-with-greater-maturity/) - take a careful look at the X-axis (Investment and Time). The recommendations in this post will significantly reduce the usual investment and time required.
@@ -18,7 +19,7 @@ This is [Confluent's maturity model](https://www.confluent.io/en-gb/blog/event-s
 
 .
 
-## Part 1: Enterprise event considerations for Apache Kafka
+## Part 1: Unleashing Potential - Essential Event Considerations for Apache Kafka in the Enterprise
 
 
 Building a small, isolated, event-driven application is relatively simple. However, as the saying goes, it's not until the application is in production that you create legacy – and legacy implies evolution, responsibility, support, and many other considerations. Scaling this application, implementing access control, ensuring observability, and providing support then become essential considerations in the application's design. Before you know it, the project has grown far beyond the simple idea we first started with. In an ironic twist, 'Hello World' has become 'HELLO WORLD!'. Suddenly, we are faced with an explosion of responsibility.
