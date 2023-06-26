@@ -1,5 +1,14 @@
 <!-- Mark up for Site Navigation Section-->
 <header class="header">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WKCHP8TF3M"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WKCHP8TF3M');
+  </script>
   <nav class="main-nav navbar navbar-expand-lg {{ if not $.IsHome }}main-nav-colored{{ end }}">
     <div class="container-fluid">
       <a href="{{.Site.BaseURL}}" class="navbar-brand">
