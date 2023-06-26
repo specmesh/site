@@ -182,6 +182,7 @@ Building an event-driven enterprise with Apache Kafka is an exciting and challen
 
 
 Resources:
+ - https://specmesh.io/blog/specmeshenterpriseevents-p2/
  - https://specmesh.io/
  - https://www.infoq.com/news/2019/06/bounded-context-eric-evans/
  - https://www.asyncapi.com/
