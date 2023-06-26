@@ -58,13 +58,11 @@ Events in an Event-Driven Architecture (EDA) can be classified into several type
 
 It's likely that you will read the list above and think, we have other types of events as well (delta’s, observable, facts, commands, rules etc). The problem is that the concept of events is just that - conceptual. It can be anything, the data model, like Kafka is unopinionated. The only pure event is a [Change Data Capture (CDC)](https://en.wikipedia.org/wiki/Change_data_capture) event - it doesn't carry any information other than the state object CDC, as an event pattern it can be used for metrics, domain events etc - because it's only carrying state information.
 
-[CQRS (Command Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html) is a high-level, event-centric architectural pattern. Despite showing its age, we often see 'Commands' (which some people like to masquerade as events). In Kafka, a connector would be used to project to a Read or Query layer (such as Elastic, etc). Commands are typically named in the imperative mood, like "PlaceOrder" or "PayInvoice", and they can be rejected if the system is not in a state that permits the processing of the command.
+[CQRS (Command Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html) is a high-level, event-centric architectural pattern. Despite showing its age, we often see 'Commands' (which some people like to masquerade as events). In Kafka, a connector would be used to project to a Read or Query layer (such as Elastic, etc). Commands are typically named in the imperative mood, like "PlaceOrder" or "PayInvoice", and they can be rejected if the system is not in a state that permits the processing of the command. I will discuss commands further down.
 
-However, the problem with Commands is that they essentially represent an API disguised as an Event. Both the producer and consumer require knowledge on how to execute the commands. This mutual 'knowledge' creates coupling and undermines the central concept of 'Choreography', dragging us into the realm of 'Orchestration'. If this statement is unclear, I recommend revisiting the introductory blog post mentioned earlier.
 
-We should aim to build Event-Driven Architectures (EDAs) using Choreography, where producers and consumers are oblivious to each other. They are decoupled, and the only shared understanding is the event structure as dictated by its schema.
+We should aim to build Event-Driven Architectures (EDAs) using Choreography, where producers and consumers are oblivious to each other. They are decoupled, and the only shared understanding is the event structure as dictated by its schema. This means we should focus on CDC as the primary eventing model.
 
-Yes, 'Commands' can be utilized (and will sometimes be necessary), but they should be restricted to a single bounded context's code repository. This includes the set of related services that are operated, maintained, and upgraded in unison. If Commands ever cross a Bounded Context, the operational burden and complexity could potentially become insurmountable
 
 
 ## What is a CDC event and what is so good about them?
@@ -88,12 +86,15 @@ In an Event-Driven Architecture (EDA), the term "command" and "event" are distin
 
 <br>
 
-The primary issue with 'Commands' is that they embody an API, a Contract, thus necessitating shared knowledge of this contract between the producer and consumer. This goes against the principle of Choreography, thereby transitioning into orchestration. While the use of Commands can occur, when it does, it needs to be confined within a Bounded Context (more on this later).
+The primary issue with 'Commands' is that they embody an API, a Contract, thus necessitating shared knowledge of this contract between the producer and consumer. This goes against the principle of Choreography, thereby transitioning into orchestration.
+
+Yes, 'Commands' can be utilized (and will sometimes be necessary), but they should be restricted to a single bounded context's code repository. This includes the set of related services that are operated, maintained, and upgraded in unison. If Commands ever cross a Bounded Context, the operational burden and complexity could potentially become insurmountable.
 
 Another issue with Commands is their incompatibility with Event sourcing. Hence, if a system state is migrated to a different environment (PROD → UAT), a workflow dependency on the Command event and the event-sourced state, constructed/built as a result of processing those commands, needs to be migrated first (or all commands drained). The operational complexity and the additional burden on tooling this situation create is apparent.
 
 
 It's crucial to keep these definitions clear in your architecture to maintain a predictable and understandable system behaviour. Each of them - commands and events - plays a unique role in the choreography and orchestration of the operations in a system.
+
 
 ## Evolutionary thinking about events
 
