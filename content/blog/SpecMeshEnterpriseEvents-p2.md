@@ -8,7 +8,7 @@ tags: ["Educational", "Blog"]
 _-- Neil Avery (Ex-Confluent)_
 
 Reviewed by
-_Andy Coates (Ex-Confluent), Stanislav Kozlovski (Confluent), Ben Gamble (Aiven)_
+_Andy Coates (Ex-Confluent), Stanislav Kozlovski (Confluent)_
 
 
 ## Part 2: Architecting the Future: Embracing Event-Driven Architecture in the Enterprise
@@ -37,7 +37,7 @@ First, let's take a quick look at Confluents’ maturity model again.
 
 <br>
 
-Level 5 isn't free, it involves a lot of concerted effort and planning. Most of those challenges  (and solutions), as we move along the X-Axis, are discussed here. Its interesting to note, that when talking about Data Mesh and the Central-Nervous System (CNS) it quickly becomes obvious that the two approaches are closely aligned with respect for achieving very similar goals.
+Level 5 isn't free, it involves a lot of concerted effort and planning. Most of those challenges  (and solutions), as we move along the X-Axis, are discussed here. It's interesting to note, that when talking about Data Mesh and the Central-Nervous System (CNS) it quickly becomes obvious that the two approaches are closely aligned with respect for achieving very similar goals.
 
 
 <br>
@@ -65,45 +65,58 @@ Consider a generic e-commerce system where you might have different Bounded Cont
 
 In short, an Aggregate is a pattern that helps to manage complexity and enforce consistency within your data models, while a Bounded Context helps to manage architectural complexity at a larger scale by separating out distinct areas of the system, each with its own unique language and carefully controlled interactions.
 
+## And then…some Data Mesh Terminology
+
+Data Mesh is the latest hype-cycling, show-boating technology - that much like microservices, no one can really agree upon what it is. However, there is consensus that there exist four pillars: Governance, Self-Serve, Domain-orientation, and Data Products. While DDD is a methodology, Data Mesh is more concerned with Data Architecture. Rather than create more noise, Im going to drill straight into the alignment and overlap between DDD and Data Mesh.
+
+Bounded Context from Domain-Driven Design (DDD) and the concept of a Domain in Data Mesh aim to encapsulate specific areas of responsibility, yet they are not identical. Here's why:
+1. Bounded Context (DDD): This is an essential part of DDD, which advises developers to define clear boundaries, both in terms of the problem domain and the corresponding solution space. A Bounded Context encapsulates a specific functionality within an application and includes the models, language (Ubiquitous Language), and operations that make sense within that context. It's primarily used in the design of microservices and the business logic layer.
+1. Domain in Data Mesh: In a Data Mesh, the concept of a domain extends beyond the bounds of software design and into data ownership and governance. Each domain in a Data Mesh treats data as a product and assumes full lifecycle responsibility for that data, including its quality, privacy, security, discoverability, and usability. These domains often align with business capabilities or organizational structure.
+
+
+While both concepts aim at organizing complex systems into smaller, more manageable parts, their focus is different. Bounded Context is more about designing and implementing software around business domains, while a domain in Data Mesh is more about treating data associated with a specific business capability as a product to be managed and used. These concepts can complement each other, and together they can provide a comprehensive approach to managing both software and data complexity.
+
+Later on, I will discuss how the two concepts of Domain and Bounded Context must be aligned through vertical slices.
+
+
 
 <img src="/images/blog/enterprise-acme-org-contexts.png" alt="drawing" width="800"/>
 <p style="text-align: center;">The ACME company 'Bounded Contexts'</p>
 
 
-
-If we look at Bounded-Context in our sample ‘ACME’ organisation we can see them in the coloured boxes.
+In the diagram above, we can see the 'ACME' organization's Domains, represented by colour-coded boxes. The black, text-filled boxes represent Async API specifications that capture the Domains Data product.
 
 
 ## Organisational challenges!
 
-Bounded-contexts (BC) are functional units that align with teams. Golden rule - remember that teams and ownership change (ReOrgs happen) but the functionality never does. A key part of any BC is its API. The AsyncAPI is a good way to define a Bounded Context’s API in an Event -Driven Architecture (EDA), including the API endpoints and the data models. This makes it the responsibility of the developers/architects to design and own AsyncAPIs using GitOps tools – like [SpecMesh OS](https://specmesh.io/) or [JulieOps](https://github.com/kafka-ops/julie).
+Bounded-contexts (BC) are functional units that align with teams. Golden rule - remember that teams and ownership change (ReOrgs happen) but the functionality never does. A key part of any BC is its API - we can call this its Data Product. The AsyncAPI is a good way to define a Bounded Context’s API in an Event -Driven Architecture (EDA), including the API endpoints and the data models. In this sense, we can call the Data part of the stack a Domain (as previously discussed). This makes it the responsibility of the developers/architects to design and own AsyncAPIs using GitOps tools – like [SpecMesh OS](https://specmesh.io/) or [JulieOps](https://github.com/kafka-ops/julie).
 
 On the other hand, cross-cutting infrastructure concerns such as clusters, servers, AZs, networking, and other server-centric infrastructure naturally fall under the purview of DevOps tooling (Ansible, Terraform etc).
 
 Lastly, we have cross-cutting data concerns. In this context, we start ideating around data quality, data governance, metadata (data catalogue), and policies. As such, a Bounded-Context API will be seamlessly aligned and integrated into this framework.
-
-## Enterprise ‘Event-driven’ architecture
-
-Where do events reside? How can we organise them in such a way that there is clear ownership and a scalable structure that functions effectively? These questions rank among my top five during all client engagements, along with concerns about provisioning and related tooling. If we model the functionality of an enterprise, we can identify discrete units that naturally fit into neat, modular segments. This is intended to be the outcome of practices like Domain-Driven Design (DDD), Event Storming, and the like – the 'Bounded Context' might appear as follows:
-
-
-<img src="/images/blog/enterprise-health-bc.png" alt="drawing" width="800"/>
-<p style="text-align: center;">The ACME company 'Health' - 'Bounded Context'</p>
 
 Examples include:
 - Tagging and tracking PII fields
 - Governing/Masking access to sensitive fields
 - Applying Data Quality rules from a centrally managed team
 
+## Enterprise ‘Event-driven’ architecture
+
+Where do events reside? How can we organise them in such a way that there is clear ownership and a scalable structure that functions effectively? These questions rank among my top five during all client engagements, along with concerns about provisioning and related tooling. If we model the functionality of an enterprise, we can identify discrete units that naturally fit into neat, modular segments. This is intended to be the outcome of practices like Domain-Driven Design (DDD), Event Storming, and the like – the 'Domain (data model) and Bounded Context (business logic)' might appear as follows:
 
 
-Note: the BC hierarchy convention being used is as follows:
+<img src="/images/blog/enterprise-health-bc.png" alt="drawing" width="800"/>
+<p style="text-align: center;">The ACME company 'Health' - 'Domain'</p>
 
-**[bounded-context].[service]**
 
-To integrate the event model with the bounded-content, the topic naming convention mirrors the same structure. This concept is often referred to as "Events as an API." Although it's frequently communicated using the industry-accepted phrase "events as a backbone," it's important to note that events will occur at multiple layers, as we will discuss further.
 
-**[bounded-context].[service].[access-control].[type]**
+Note: the Domain hierarchy convention being used is as follows:
+
+`[domain].[service]`
+
+To integrate the event model with the domain & bounded context, the topic naming convention mirrors the same structure. This concept is often referred to as "Events as an API". Although it's frequently communicated using the industry-accepted phrase "events as a backbone", it's important to note that events will occur at multiple layers, as we will discuss further.
+
+`[domain].[service].[access-control].[type]`
 
 **Access control:** `private`, `public`, `protected` <br>
 **Type:** data type
@@ -142,7 +155,7 @@ I'll cover some of them briefly, but suffice it to say, they rank high on the Co
 **Consider this topic name: `finance.campaign._public.sale`**
 
 
-The topic name makes it abundantly clear that owning BC is 'finance.' Consequently, we readily grasp the intended scope (_public) as well as the data being published (Sale). This approach is simple – it can be understood by anyone. It needs to be applied to all layers of data, ops and infrastructure of the Bounded Context.  All elements relating to the BC, including the codebase, should form a vertical slice that can be traced from.
+The topic name makes it abundantly clear that owning BC & Domain is 'finance.' Consequently, we readily grasp the intended scope (_public) as well as the data being published (Sale). This approach is simple – it can be understood by anyone. It needs to be applied to all layers of data, ops and infrastructure of the Bounded Context.  All elements relating to the Domain, including the codebase, should form a vertical slice that can be traced from top to bottom.
 
 Here is a short checklist:
 - Service accounts should use principles reflecting the domain owner or aggregate identity, such as 'acme.finance.campaign.'
@@ -160,7 +173,7 @@ When all of these are adhered to we end up with a functional part of the org tha
 
 ## Some common pitfalls
 
-The concept of Bounded Contexts needs to be functionally oriented, not organizationally oriented. This simple yet essential statement must be remembered: organizations change, but functionality doesn't.
+The concept of Domains & Bounded Contexts needs to be functionally oriented, not organizationally oriented. This simple yet essential statement must be remembered: organizations change, but functionality doesn't. We are enforcing a Data model.
 
 Moreover, given that this is the foundation of our data model, topic naming should never reflect infrastructure. For instance, a name like `acme.us-east1.blah.blah.blah` is inappropriate. This is because infrastructure and data models are separate concerns. Consequently, such naming conventions imply that data cannot be migrated between regions or environments without necessitating a rewrite or mapping.
 
@@ -180,7 +193,7 @@ Blackbox testing focuses on the Bounded Context’s behaviour, inputs and output
 
 ## Self Governance
 
-Apache Kafka vendors support several types of access control mechanisms (ACLs, RBaC, IAM). The standard version is referred to as Access Control Lists (ACLs). There will be typically be many ACLs used to control all kinds of access; they can quickly become unwieldy if not carefully managed. Organizing topics and resources within the aforementioned hierarchy can significantly simplify the process. SpecMesh.io, mitigates the complexity of ACL configuration by leveraging topic naming by introducing keyword placement using `_public`, `_private`, and `_protected`. This simplification approach makes topics readable and means users can easily configure topics (via editing the Spec), understand the sharing approach and implement and access control using a single resource (Git). Ill discuss this more in more detail in the next section.
+Apache Kafka vendors support several types of access control mechanisms (ACLs, RBaC, IAM). The standard version is referred to as Access Control Lists (ACLs). There will typically be many ACLs used to control all kinds of access; they can quickly become unwieldy if not carefully managed. Organizing topics and resources within the aforementioned hierarchy can significantly simplify the process. SpecMesh.io, mitigates the complexity of ACL configuration by leveraging topic naming by introducing keyword placement using `_public`, `_private`, and `_protected`. This simplification approach makes topics readable and means users can easily configure topics (via editing the Spec), understand the sharing approach and implement and access control using a single resource (Git). Ill discuss this more in more detail in the next section.
 
 The ultimate goal should be self-governance, with an aim to prevent bottlenecks within infrastructure teams.
 
@@ -189,7 +202,7 @@ The ultimate goal should be self-governance, with an aim to prevent bottlenecks 
 
 ## Being Policy and API Driven with the AsyncAPI Spec
 
-The [AsyncAPI](https://www.asyncapi.com/) is an API schema/framework/ecosystem that emphasizes asynchronous communication patterns. It can be used to define a single EDA or a collection can be used to define parts of a large, distributed EDA. The last 12 months have seen an explosive interest in its adoption. While many tools exist for code generation and documentation, SpecMesh uses these specs as the source of truth (GitOps style) to provision Kafka resources and control access to them. It enables self-governance for data access, such as `_public`, `_private`, and `_protected` topics, and can also be extended to apply policies.
+The [AsyncAPI](https://www.asyncapi.com/) is an API schema/framework/ecosystem that emphasizes asynchronous communication patterns. It can be used to define a single EDA or a collection can be used to define parts of a large, distributed EDA. The API can be treated as the Domain’s API and Data Product. The last 12 months have seen an explosive interest in its adoption. While many tools exist for code generation and documentation, SpecMesh uses these specs as the source of truth (GitOps style) to provision Kafka resources and control access to them. It enables self-governance for data access, such as `_public`, `_private`, and `_protected` topics, and can also be extended to apply policies.
 
 Note: Access rules apply as follows:
 - `_public` grants _read_ access to all principles and restricts ‘write’ access to the owning BC.
@@ -230,7 +243,8 @@ If you don't want to build most of this yourself, then SpecMesh will get you mos
 
 ## Data Catalogues, Data Discovery, Glossary & Meta Data
 
-At this point, we briefly delve into the DataMesh space. Please [examine the four pillars](https://martinfowler.com/articles/data-mesh-principles.html) and see what suits you best; there's no consensus apart on what a Data Mesh is - apart from the idea that it should be humorously renamed to ‘data-mess’. As we have limited writing space left, let's just focus on Data Catalogues. Most organizations already possess a Data Catalogue, a Data Quality tool, etc. The data catalogue serves as the endpoint where Developers, Data Scientists, and similar professionals can search, discover, and interact with data, tags, and metadata models; it contains the meta model of everything in the organisation. This should include AsyncAPI specifications (if you're using specmesh.io), as well as metadata attached to event schemas (Protobuf and Avro support metadata annotations - i.e. fields identified as PII). Once discovery is enabled, new products and tooling can search and explore the organization's data ecosystem to identify potential data sources. There's no shortage of data catalogues out there - each one has its own unique benefits; its quite common for DIY catalgoes to be built upon anything from GitHub, S3, however, they tend to require more functionality that engineers will initially appreciate.
+At this point, we briefly delve into the DataMesh space. Please [examine the four pillars](https://martinfowler.com/articles/data-mesh-principles.html) and see what suits you best; there's no consensus apart on what a Data Mesh is - apart from the idea that it should be humorously renamed to ‘data-mess’. As we have limited writing space left, let's just focus on Data Catalogues. Most organizations already possess a Data Catalogue, a Data Quality tool, etc. The data catalogue serves as the endpoint where Developers, Data Scientists, and similar professionals can search, discover, and interact with data, tags, and metadata models; it contains the meta model of everything in the organisation. Think of it like an organisation's Data DNA. This should include AsyncAPI specifications (if you're using specmesh.io), as well as metadata attached to event schemas (Protobuf and Avro support metadata annotations - i.e. fields identified as PII). Once discovery is enabled, new products and tooling can search and explore the organization's data ecosystem to identify potential data sources. There's no shortage of data catalogues out there - each one has its own unique benefits; it's quite common for DIY catalogues to be built upon anything from GitHub, S3, however, they tend to require more functionality that engineers will initially appreciate.
+
 
 I can thoroughly recommend subscribing to the [Symphony of Search, LinkedIn, newsletter by Ole Olesen-Bagneux](https://www.linkedin.com/newsletters/6937422474598883328/).
 
@@ -249,7 +263,6 @@ Some Key Takeaways:
 Finally, if you want to accelerate all of this and get beyond level 5 of the [Confluent maturity curve](https://www.confluent.io/en-gb/blog/event-streaming-benefits-increase-with-greater-maturity), then look at [SpecMesh.io](https://specmesh.io/) - it will solve 90 percent of the challenges mentioned above (or prevent you from making mistakes that are impossible to fix later). Yes - this sounds like a sales pitch - but there is truly nothing else out there that is Open Source and does all of this.
 
 Finally finally, if you want to have a free 45-minute chat on building an enterprise-level eventing platform - please reach out.
-
 
 
 <br>
