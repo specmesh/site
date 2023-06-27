@@ -8,7 +8,7 @@ tags: ["Educational", "Blog"]
 _-- Neil Avery (Ex-Confluent)_
 
 Reviewed by
-_Andy Coates (Ex-Confluent), Stanislav Kozlovski (Confluent), Ben Gamble (Aiven)_
+_Andy Coates (Ex-Confluent), Stanislav Kozlovski (Confluent)_
 
 
 Building the 'central nervous system' is one of those phrases that presents a simple concept, but in reality, it turns into an enormous, complex, and challenging task that is generally done incorrectly. This blog post attempts to cover the fundamentals, decisions, thinking, and wider considerations that need to be assembled in a logical way. By leveraging these learnings and relying on tools that simplify processes and adhere to best practices, most pitfalls can be avoided. I've divided the post into two parts. The first part deals with events and conditions for events in the enterprise, and the second part focuses on the area where the 'rubber meets the road'. It covers many of the org level considerations and challenges that need to be overcome in order to build something that is is truely transformative. From Domain orientation, slicing the domain into functional data models, repos and runtimes, to data catalogues and enabling self governance. Ideally, this mini-series should be much longer and filled with more elaborate examples, but I'm trying to provide as much detail and value as possible - in the shortest possible space! My hope is that this information will empower you to embark on your own journey to build an event-driven enterprise with Apache Kafka.
