@@ -59,7 +59,7 @@ unsafe= true
   contactLink = "contact"
   copyright = "© {year} <a href=\"https://specmesh.io/\" target=\"_blank\">SpecMesh.io </a>"
   fabFormURL =  "https://fabform.io/f/u00kv3-"
-  googleAnalytics = "G-JZ95FEWF9K"
+  googleAnalytics = "G-WKCHP8TF3M"
   logo = "images/logo.png"
   footerlogo = "images/logo.png"
   footerDescription = "This project is community funded, all help is greatly appreciated"
