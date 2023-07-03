@@ -13,7 +13,7 @@ _Andy Coates (Ex-Confluent), Stanislav Kozlovski (Confluent)_
 
 ## Part 2: Architecting the Future: Embracing Event-Driven Architecture in the Enterprise
 
-In recent years, we've observed several significant trends that prompt us to reassess our beliefs about constructing large-scale enterprise systems. By 'large scale,' I'm actually referring to a vast number of interconnected applications.
+In recent years, we've observed several significant trends that prompt us to reassess our beliefs about constructing large-scale enterprise systems. By 'large scale', I'm actually referring to a vast number of interconnected applications.
 
 In [part one](https://specmesh.io/blog/specmeshenterpriseevents-p1/), I discussed our approach to understanding events and began to touch on Domain orientation. In this part, I am going to address trends and considerations for the wider enterprise. Each one of these brings with it a plethora of beliefs and fundamentals – all of which are essential to building a successful solution for the enterprise. Unfortunately, there isn't a single product capable of perfectly fitting the unique characteristics of an organisation's DNA. However, as we'll see later, [SpecMesh OS](https://specmesh.io/) significantly accelerates the implementation of a clean solution, providing effective guardrails and promoting best practices.
 
@@ -169,11 +169,17 @@ Here is a short checklist:
 
 When all of these are adhered to we end up with a functional part of the org that everyone can understand. It can support blackbox release processes and more. It makes things simple.
 
+<img src="/images/blog/enterprise-infra-slice.png" alt="drawing" width="800"/>
+<p style="text-align: center;">A Domain is a slice that cuts from Codebase to runtime and data infra</p>
+
+
+
+
 
 
 ## Some common pitfalls
 
-The concept of Domains & Bounded Contexts needs to be functionally oriented, not organizationally oriented. This simple yet essential statement must be remembered: organizations change, but functionality doesn't. We are enforcing a Data model.
+The concept of Domains & Bounded Contexts needs to be functionally oriented, not organizationally oriented. This simple yet essential statement must be remembered: organizations change, but functionality doesn't. We are enforcing a data model.
 
 Moreover, given that this is the foundation of our data model, topic naming should never reflect infrastructure. For instance, a name like `acme.us-east1.blah.blah.blah` is inappropriate. This is because infrastructure and data models are separate concerns. Consequently, such naming conventions imply that data cannot be migrated between regions or environments without necessitating a rewrite or mapping.
 
@@ -225,7 +231,7 @@ One of the challenges faced by any large organization is securing funding for en
 Tools like SpecMesh promote responsible behaviour by ensuring that topics, ACLs, consumer-ids, and other resources map to BCs. Only through this method of requiring guardrails can SpecMesh extract the production and consumption metrics of a data product.
 
 
-One solution is to use SpecMesh OS storage and consumption commands:
+One solution is to use SpecMesh OS `storage` and `consumption` commands:
 - https://github.com/specmesh/specmesh-build/blob/main/cli/README.md#command-storage-chargeback-metrics 
 - https://github.com/specmesh/specmesh-build/blob/main/cli/README.md#command-consumption-chargeback-metrics )
 
@@ -248,7 +254,11 @@ At this point, we briefly delve into the DataMesh space. Please [examine the fou
 
 I can thoroughly recommend subscribing to the [Symphony of Search, LinkedIn, newsletter by Ole Olesen-Bagneux](https://www.linkedin.com/newsletters/6937422474598883328/).
 
-Some Key Takeaways:
+## Finally
+
+I hope you have enjoyed this mini-series. There is always more to discuss, plan, and figure out. In my opinion, the key element is to employ a systematically consistent approach across the board. Understanding the DNA of your company is pivotal for success. It's important to know whether you should build or buy, understand the reach of an organization-wide strategy, and consider how people and politics might obstruct such decisions, thereby driving an incremental strategy.
+
+Some key takeaways:
 - Building for scale and the enterprise requires Domain orientation (Bounded Contexts) to instil clear ownership of resources and to also establish governance and chargeback.
 - Agree on a common BC structure/pattern that works for your company based on functionality, not organisation structure.
 - Vertically slice from code-repo/services -> build pipeline -> topics/clusters using BC alignment.
