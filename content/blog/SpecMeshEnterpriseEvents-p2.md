@@ -170,9 +170,7 @@ Here is a short checklist:
 When all of these are adhered to we end up with a functional part of the org that everyone can understand. It can support blackbox release processes and more. It makes things simple.
 
 <img src="/images/blog/enterprise-infra-slice.png" alt="drawing" width="800"/>
-<p style="text-align: center;">A Domain is a slice that cuts from Codebase to runtime and data infra</p>
-
-
+<p style="text-align: center;">A Domain is a slice that cuts from codebase to runtime and data infra</p>
 
 
 
