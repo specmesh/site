@@ -262,7 +262,7 @@ Some key takeaways:
 - Vertically slice from code-repo/services -> build pipeline -> topics/clusters using BC alignment.
 - Require black-box testing of BCs.
 - Capture BCs using the AsyncAPI spec.
-- Support discovery of a Bounded-Context’s data products by publishing to a Data catalogue.
+- Support discovery of a Domain's data products by publishing to a Data Catalogue.
 - Aim for specification-driven governance that enforces topic naming conventions and access control.
 
 
