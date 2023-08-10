@@ -130,7 +130,7 @@ SpecMesh works with vendor agnostic SASL/SCRAM authentication (cross-vendor, mul
 ## MSK has a few limitations
 
 1. AWS want you to use IAM - however this only works with Java clients using their jars
-1. Non-Java clients (RUST, Go) will need to use SASL/SCRAM with MSK - IAM wont work without building you own IAM integration. 
+1. Non-Java clients (RUST, Go) will need to use SASL/SCRAM with MSK - IAM wont work without building your own IAM integration. 
 1. IAM isnt that easy to setup and/or automate
 1. Broker property: super.users parameter is not supported on MSK (this property bypasses all ACL Checks - see https://github.com/apache/kafka/blob/trunk/core/src/main/scala/kafka/security/authorizer/AclAuthorizer.scala). A workaround is to use multi-authentication (below)
 
@@ -145,7 +145,7 @@ Let's consider the following example: both IAM and SASL/SCRAM are enabled, and '
 
 On the other hand, when a client is using non-IAM authentication, the added ACLs (including the "allow.everyone.if.no.acl.found" setting) will have an effect. In this case, authorization will be controlled by ACLs. So, when 'client B,' which uses SASL/SCRAM, attempts to perform any operations, it will be validated against the ACLs that were added.
 
-In short, to fill in the gaps in above table:
+In short, to fill in the gaps in the above table:
 
 Authn & Authz mech | Kafka client authn | Kafka client authz | Kafka ACL behaviour | Property allow.everyone.if.no.acl.found
  --- | --- | --- | --- | --- | --- |
@@ -204,7 +204,7 @@ Source: https://github.com/specmesh/getting-started-apachekafka/blob/main/resour
 
 ## Requirements
 1. Admin access to your AWS console (ability to create MSK cluster, start an instance, configure IAM, roles, start instances, configure secrets etc)
-1. Basic understanding of of Kafka broker (broker properties), and client eco-system (producer, consumer, client.properties)
+1. Basic understanding of Kafka broker (broker properties), and client eco-system (producer, consumer, client.properties)
 
 <br>
 
@@ -273,7 +273,7 @@ You can find more details about creating a symmetric key [here](https://docs.aws
 
 a. Go to the [AWS Secrets Manager console](https://console.aws.amazon.com/secretsmanager/) <br>
 b. Click Store a new secret<br>
-c. Choose Other type of secret (e.g. API key) for the secret type<br>
+c. Choose `Other` type of secret (e.g. API key) for the secret type<br>
 d. Under Key/value pairs click on Plaintext<br>
 e. Paste the following in the space below it and replace <your-username> and <your-password> with the username and password you want to set for the cluster<br>
 ```json
